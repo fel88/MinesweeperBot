@@ -296,5 +296,10 @@ namespace MinesweeperBot
             Bot.Rows = 8;
             Bot.Cols = 8;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProcessVideoPipeline();
+        }
     }
 }
