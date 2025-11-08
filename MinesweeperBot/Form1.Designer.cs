@@ -35,6 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.watermark1 = new MinesweeperBot.Watermark();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,6 +43,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -67,8 +69,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.watermark1 = new MinesweeperBot.Watermark();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -154,6 +154,16 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "..";
             // 
+            // watermark1
+            // 
+            this.watermark1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.watermark1.Hint = "Type window name or handle here";
+            this.watermark1.Location = new System.Drawing.Point(19, 1);
+            this.watermark1.Name = "watermark1";
+            this.watermark1.Size = new System.Drawing.Size(213, 20);
+            this.watermark1.TabIndex = 0;
+            this.watermark1.TextChanged += new System.EventHandler(this.watermark1_TextChanged);
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -236,6 +246,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(395, 318);
             this.panel3.TabIndex = 17;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(233, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "draw desk";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -483,26 +503,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(810, 350);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // watermark1
-            // 
-            this.watermark1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.watermark1.Hint = "Type window name or handle here";
-            this.watermark1.Location = new System.Drawing.Point(19, 1);
-            this.watermark1.Name = "watermark1";
-            this.watermark1.Size = new System.Drawing.Size(213, 20);
-            this.watermark1.TabIndex = 0;
-            this.watermark1.TextChanged += new System.EventHandler(this.watermark1_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(233, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "draw desk";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,6 +511,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.statusStrip1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MinesweeperBot";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
